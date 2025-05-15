@@ -1,0 +1,125 @@
+/* Gaya dasar */
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+  background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./assets/bg.png");
+    /* background-size: 100% 100%; */
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Gambar anak responsif */
+.child-photo {
+  width: 150px;
+  height: auto;
+  margin-top: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji1 {
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  font-size: 30px;
+  animation: bounce 1s infinite alternate;
+}
+.emoji2 {
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  font-size: 30px;
+  animation: bounce 1s infinite alternate;
+}
+.emoji3 {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 30px;
+  animation: bounce 1s infinite alternate;
+}
+
+.emoji {
+  animation: bounce 1s infinite alternate;
+}
+
+.title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: showUp 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes showUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+
+.child-photo:hover {
+  transform: scale(1.1); /* Membesar saat hover */
+  transition: 0.3s ease-in-out;
+}
+
+
+
+/* Tombol responsif */
+button {
+  background-color: #ff1493;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+/* 🔹 Media Query untuk Mobile */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .child-photo {
+    width: 120px; /* Lebih kecil di mobile */
+  }
+
+  button {
+    width: 100%; /* Tombol lebih besar */
+    padding: 14px;
+  }
+}
+
+/* 🔹 Media Query untuk Tablet */
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 90%;
+  }
+}
