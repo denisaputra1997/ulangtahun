@@ -1,36 +1,26 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const RSVP = () => {
-
-   const [name, setName] = useState("");
-   const [error, setError] = useState(null);
+  const [name, setName] = useState("");
 
   const sendWhatsAppMessage = () => {
-    const phoneNumber = "087888883403"; // Ganti dengan nomor WhatsApp tujuan
-    const message = `Halo! Saya ${name}, saya akan hadir di acara ulang tahun `;
+    const phoneNumber = "6281234567890";
+    const message = `Halo! Saya ${name}, saya akan hadir di acara 🎉`;
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    fetch(whatsappLink)
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("Tidak dapat mengirimkan pesan WhatsApp");
-        }
-      })
-      .catch((err) => setError(err.message));
+    window.open(whatsappLink, "_blank");
   };
 
   return (
-    <section className="rsvp">
-      <h2>🎊 Konfirmasi Kehadiran</h2>
-      <p>Silakan isi form RSVP di bawah ini:</p>
+    <section className="container mt-4 p-4 bg-light rounded shadow-lg">
+      <h2 className="mb-3">🎊 Konfirmasi Kehadiran</h2>
       <input 
         type="text" 
+        className="form-control mb-3" 
         placeholder="Masukkan nama Anda" 
         value={name} 
         onChange={(e) => setName(e.target.value)} 
       />
-      <button onClick={sendWhatsAppMessage}>Konfirmasi Kehadiran</button>
+      <button className="btn btn-success w-100" onClick={sendWhatsAppMessage}>Konfirmasi Kehadiran</button>
     </section>
   );
 };

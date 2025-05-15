@@ -1,41 +1,37 @@
-import React from "react";
-import "./App.css";
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Info from "./components/Info";
-// import RSVP from "./components/RSVP";
-import { useEffect } from "react";
-import { useState } from "react";
+import RSVP from "./components/RSVP";
 
 function App() {
- useEffect(() => {
-    const audio = document.getElementById("bg-music");
+  const [musicStarted, setMusicStarted] = useState(false);
 
+  useEffect(() => {
+    const audio = document.getElementById("bg-music");
     const playAudio = () => {
-      if (audio) {
+      if (audio && !musicStarted) {
         audio.volume = 0.5;
         const playPromise = audio.play();
-
         if (playPromise !== undefined) {
-          playPromise
-            .catch(() => console.log("Autoplay dicegah, klik halaman untuk memulai musik."));
+          playPromise.catch(() => console.log("Autoplay dicegah, klik halaman untuk memulai musik."));
         }
+        setMusicStarted(true);
       }
     };
 
-    // Musik akan mulai setelah interaksi pertama (klik halaman)
     document.addEventListener("click", playAudio);
     return () => document.removeEventListener("click", playAudio);
-  }, []);
+  }, [musicStarted]);
 
   return (
-    <div className="container">
-      <audio id="bg-music" src="assets/happy.mp3" loop></audio>
-      {/* Pemutar musik */}
+    <div className="container text-center mt-5">
+      <audio id="bg-music" src="/assets/invitation-music.mp3" loop></audio>
       <Header />
       <Info />
-      {/* <RSVP /> */}
-      <footer className="footer">
-        <p>💖 Kami tidak sabar merayakan bersama! 🎁</p>
+      <RSVP />
+      <footer className="mt-4">
+        <p className="text-muted">💖 Kami tidak sabar merayakan bersama! 🎁</p>
       </footer>
     </div>
   );

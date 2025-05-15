@@ -2,11 +2,11 @@ import React from "react";
 
 const Info = () => {
   return (
-    <section className="info">
-      <h2 className="emoji">✨ Detail Acara</h2>
-      <p><strong>📅 Tanggal:</strong> [Tanggal Acara]</p>
-      <p><strong>📍 Lokasi:</strong> [Alamat Acara]</p>
-      <p><strong>⏰ Waktu:</strong> [Jam Acara]</p>
+    <section className="container mt-4 p-4 bg-light rounded shadow-lg">
+      <h2 className="mb-3">✨ Detail Acara</h2>
+      <p className="fs-5"><strong>📅 Tanggal:</strong> [Tanggal Acara]</p>
+      <p className="fs-5"><strong>📍 Lokasi:</strong> [Alamat Acara]</p>
+      <p className="fs-5"><strong>⏰ Waktu:</strong> [Jam Acara]</p>
     </section>
   );
 };
