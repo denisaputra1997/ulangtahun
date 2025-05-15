@@ -6,19 +6,34 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: black;
 }
 
 @media (max-width: 768px) {
   body {
     background-image: url("./assets/bg.png");
     /* background-size: 100% 100%; */
+    color: white; /* Jika di dark mode */
   }
 }
 
 .container {
-  max-width: 800px;
   margin: auto;
   padding: 20px;
+  max-width: 1200px; /* Maksimal lebar container */
+  width: 100%; /* Lebar container mengikuti lebar perangkat */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
 }
 
 /* Gambar anak responsif */
@@ -122,4 +137,8 @@ button:hover {
   .container {
     max-width: 90%;
   }
+}
+
+h3, p {
+  color: black !important;
 }

@@ -4,7 +4,7 @@ import childImage from "../assets/gavin.png"; // Gambar anak
 const Header = () => {
   return (
     <header className="header">
-      <h3 className="title">🎂 Selamat Ulang Tahun🎈
+      <h3 className="title" align="center">🎂 Selamat Ulang Tahun🎈
       <p>GAVIN</p>
       </h3>
       <p>Yuk, rayakan hari spesial bersama kami!</p>
