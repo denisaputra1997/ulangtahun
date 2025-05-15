@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Info from "./components/Info";
-import RSVP from "./components/RSVP";
+// import RSVP from "./components/RSVP";
 
 function App() {
   const [musicStarted, setMusicStarted] = useState(false);
@@ -26,10 +26,10 @@ function App() {
 
   return (
     <div className="container text-center mt-5">
-      <audio id="bg-music" src="/assets/invitation-music.mp3" loop></audio>
+      <audio id="bg-music" src="/assets/happy.mp3" loop></audio>
       <Header />
       <Info />
-      <RSVP />
+      {/* <RSVP /> */}
       <footer className="mt-4">
         <p className="text-muted">💖 Kami tidak sabar merayakan bersama! 🎁</p>
       </footer>
