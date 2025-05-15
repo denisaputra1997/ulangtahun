@@ -24,6 +24,10 @@ const Header = () => {
             width="200"
           />
         </div>
+        <div className="d-flex justify-content-center">
+          <i className="fas fa-gift fa-2x bounce" style={{ animation: "bounce 1s ease infinite" }}></i>
+        </div>
+       
       </div>
     </header>
   );
