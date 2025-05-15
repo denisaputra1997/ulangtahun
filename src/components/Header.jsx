@@ -12,8 +12,10 @@ const Header = () => {
       }}
     >
       <div className="container">
-        <h1 className="display-4 font-weight-bold text-shadow" style={{ fontFamily: "Pacifico, cursive" }}>🎉 Undangan Spesial 🎈</h1>
-        <p className="lead font-weight-bold">Kami mengundang Anda untuk acara yang luar biasa!</p>
+        <h3 className="display-5 font-weight-bold text-shadow" style={{ fontFamily: "Pacifico, cursive" }}>🎉 Selamat Ulang Tahun 🎈</h3>
+        <h4 className="display-6 font-weight-bold text-shadow" style={{ fontFamily: "Pacifico, cursive" }}>Gavin </h4>
+        <h5 style={{ fontFamily: " cursive" }}>Yang ke - 2 tahun</h5>
+        
         <div className="d-flex justify-content-center">
           <img
             src={partyImage}
