@@ -1,6 +1,6 @@
 import React from "react";
 import partyImage from "../assets/gavin.png";
-import bgimage from "../assets/bg.png";
+import bgimage from "../assets/babysharck.jpg";
 
 const Header = () => {
   return (
