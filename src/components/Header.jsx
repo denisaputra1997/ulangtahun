@@ -5,7 +5,7 @@ import bgimage from "../assets/babysharck.jpg";
 const Header = () => {
   return (
     <header
-      className="py-4 bg-primary text-dark rounded"
+      className="py-4 my-0 bg-primary text-dark rounded"
       style={{
         backgroundImage: `url(${bgimage})`,
         backgroundSize: "cover",

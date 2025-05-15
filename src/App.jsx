@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="container text-center mt-5">
-      <audio id="bg-music" src="/assets/happy.mp3" loop></audio>
+      <audio id="bg-music" src="/public/baby-shark.mp3" loop preload="auto" hidden></audio>
       <Header />
       <Info />
       {/* <RSVP /> */}
