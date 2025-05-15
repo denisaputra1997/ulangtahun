@@ -12,10 +12,13 @@ function App() {
     const playAudio = () => {
       if (audio && !musicStarted) {
         audio.volume = 0.5;
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(() => console.log("Autoplay dicegah, klik halaman untuk memulai musik."));
-        }
+        // force play audio on mobile
+        audio.play().catch(() => {
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => console.log("Autoplay dicegah, klik halaman untuk memulai musik."));
+          }
+        });
         setMusicStarted(true);
       }
     };
