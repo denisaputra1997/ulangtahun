@@ -36,10 +36,10 @@ const Header = () => {
           />
         </div>
 
-        <button className="btn btn-primary btn-lg ml-3 mt-3">
+        {/* <button className="btn btn-primary btn-lg ml-3 mt-3">
           <FaPlay className="mr-2" />
           Play
-        </button>
+        </button> */}
       </div>
     </header>
   );
