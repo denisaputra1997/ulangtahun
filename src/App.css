@@ -139,6 +139,6 @@ button:hover {
   }
 }
 
-h3, p {
+h3, h2, p {
   color: black !important;
 }

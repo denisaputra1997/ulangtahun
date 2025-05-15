@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Info from "./components/Info";
-import RSVP from "./components/RSVP";
+// import RSVP from "./components/RSVP";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -33,7 +33,7 @@ function App() {
       {/* Pemutar musik */}
       <Header />
       <Info />
-      <RSVP />
+      {/* <RSVP /> */}
       <footer className="footer">
         <p>💖 Kami tidak sabar merayakan bersama! 🎁</p>
       </footer>
